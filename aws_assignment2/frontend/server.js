@@ -6,7 +6,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 // Flask backend via Gunicorn
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:5000";
+const BACKEND_URL = process.env.BACKEND_URL || "http://10.0.1.254:5000";
 
 app.get("/", (req, res) => {
   res.render("index", { message: null });
